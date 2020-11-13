@@ -1,0 +1,54 @@
+
+.Form-heading
+{
+    color: #36424A;
+    font-size: 20px;
+    line-height: 24px;
+        font-weight: bold;
+}
+
+.details-block
+{
+    
+    display: flex;
+    justify-content: center; 
+}
+
+.detail-right
+{
+    flex-basis: 55%;
+    background-color: #FFFFFF;
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+}
+
+.btnclass
+{
+    margin-top: 20px;
+    width: 90px;
+    height: 40px;
+    color: white;
+    border-radius: 8%;
+    display: block;
+    background-color:#28a745;
+    border-color: #28a745;
+}
+
+.form-group
+{
+   padding:36px;
+}
+
+input
+{
+    width: 410px;
+}
+
+.label-heading
+{
+    margin-top: 9px;
+    color: #36424A;
+    font-size: 14px;
+    line-height: 24px;
+}

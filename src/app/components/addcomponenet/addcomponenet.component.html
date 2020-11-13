@@ -1,0 +1,32 @@
+    <div class="details-block max-width-container">
+       <div class="detail-right"> 
+        <div class="form-group">
+          <h3 class="Form-heading"> Add Warehouse details </h3>
+            <form [formGroup]="warehouseForm" (ngSubmit)="onSave()">
+                    <label for="name" class="label-heading">Warehouse name</label>
+                    <input type="text"  id="name" class="form-control" formControlName="name"/>
+                    <label for="imagePath" class="label-heading">Warehouse code</label>
+                    <input type="text" id="imagePath" class="form-control" formControlName="code"/>
+                    <label for="imagePath" class="label-heading">city</label>
+                    <input type="text" id="imagePath" class="form-control" formControlName="city"/>
+                    <label for="imagePath" class="label-heading">space availability</label>
+                    <input type="text" id="imagePath" class="form-control" formControlName="space_available"/>
+                    <label for="imagePath" class="label-heading">type</label>
+                    <input type="text" id="imagePath" class="form-control" formControlName="type"/>
+                    <label for="imagePath" class="label-heading">cluster</label>
+                    <input type="text" id="imagePath" class="form-control" formControlName="cluster"/>
+                    <label for="imagePath" class="label-heading">Is registered</label>
+                    <input type="text" id="imagePath" class="form-control" formControlName="is_registered"/>
+                    <label for="imagePath" class="label-heading">live status</label>
+                    <input type="text" id="imagePath" class="form-control" formControlName="is_live"/>   
+                    <button class="btnclass" 
+                    type="submit"
+                    [disabled]="!warehouseForm.valid" >
+                    Save
+                  </button>
+                </form>
+               </div>
+              </div>
+            </div>
+
+    

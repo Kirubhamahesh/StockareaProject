@@ -1,0 +1,13 @@
+<header class="page-header">
+    <nav class="nav-group">
+      <a class="nav-items" [routerLink]="['/home']"> Stockarea</a>
+      <div class="nav-right-group"  *ngIf="addbtn">
+          <a class="nav-items" 
+          (click)="newwarehouse()" 
+          [routerLink]="[ '/addwarehouse']"> 
+           Add warehouse
+          </a>
+      </div>
+    </nav>
+   
+  </header>

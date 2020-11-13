@@ -1,0 +1,70 @@
+
+<div class="filter-block">
+<h5 class="selected-count">{{ products.length }}  warehouse </h5>
+<button (click)="openFilter()" *ngIf="!clearbtn" class="filter-btn">  
+  <img src="./assets/images/icon.png" class="filter-image"> Filter</button>
+<button (click)="clearFilter()" *ngIf="clearbtn"  class="filter-btn">
+  <img src="./assets/images/icon.png" class="filter-image"> Clear Filter</button>
+</div>
+ 
+
+
+
+<ng-template #content let-modal >
+    <div class="modal-header">
+       <div class="filter-text">
+        <h4 class="modal-title" id="modal-basic-title">Filter</h4>
+       </div>
+        <button type="button" class="close" aria-label="Close" (click)="detailClose()" style="outline: none;">
+          <span aria-hidden="true" style="border: none; color: white;">&times;</span>
+        </button>
+      </div>
+   <div class="modal-body">
+
+    
+      <div class="item-block">
+        <h4 class="heading-text">City</h4>
+        <div  class="content-block">
+        <div class="select-btn" *ngFor="let item of city; let i = index">
+          <input type="checkbox" id='city-{{i}}' class='data-btn' />
+          <label for='city-{{i}}' (click)="addCity(item)" class="label"> {{ item}}</label>
+        </div> 
+        
+        </div>
+      </div>  
+
+      <div class="item-block">
+        <h4 class="heading-text">Space availability</h4>
+        <div  class="content-block">
+        <div class="select-btn" *ngFor="let item of spaceAvailable; let i = index">
+          <input type="checkbox" id='space-{{i}}' class='data-btn' />
+          <label for='space-{{i}}' (click)="addSpaceAvailable(item)" class="label"> {{ item}}</label>
+        </div> 
+        
+        </div>
+      </div>  
+
+      <div class="item-block">
+        <h4 class="heading-text">Cluster</h4>
+        <div  class="content-block">
+        <div class="select-btn" *ngFor="let item of cluster; let i = index">
+          <input type="checkbox" id='cluster-{{i}}' class='data-btn' />
+          <label for='cluster-{{i}}' (click)="addCluster(item)" class="label"> {{ item}}</label>
+        </div> 
+        
+        </div>
+      </div>  
+
+    
+     
+
+    
+   </div>
+
+   <div class="modal-footer">
+    <button (click)="filterCancel()" class="btn cancel-btn">Cancel</button>
+    <button (click)="filterWarehouse()" class="btn apply-btn">Apply</button>
+  </div>
+
+  
+  </ng-template>

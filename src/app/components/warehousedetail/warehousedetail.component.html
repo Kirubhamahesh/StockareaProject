@@ -1,0 +1,69 @@
+     
+<div class="details-block max-width-container">
+    <div class="details-left">
+        <div class="first-column">
+           <div class="detail-item">
+                <h6 class="detail-heading">Warehouse name</h6>
+                <h6 class="detail-content">{{ detailedobj?.name}}</h6>
+            </div>
+            <div class="detail-item">
+                <h6 class="detail-heading">City</h6>
+                <h6 class="detail-content">{{ detailedobj?.city}}</h6>
+            </div>
+            <div class="detail-item">
+                <h6 class="detail-heading">Type</h6>
+                <h6 class="detail-content">{{ detailedobj?.type}}</h6>
+            </div>
+            <div class="detail-item">
+                <h6 class="detail-heading">Code</h6>
+                <h6 class="detail-content">{{ detailedobj?.code}}</h6>
+            </div>
+        </div>
+        <div class="second-column">
+            <div class="detail-item">
+                 <h6 class="detail-heading">Warehouse Space</h6>
+                 <h6 class="detail-content">{{ detailedobj?.space_available}}</h6>
+             </div>
+             <div class="detail-item">
+                 <h6 class="detail-heading">Cluster</h6>
+                 <h6 class="detail-content">{{ detailedobj?.cluster}}</h6>
+             </div>
+             <div class="detail-item">
+                 <h6 class="detail-heading">Register status</h6>
+                 <h6 class="detail-content"> {{detailedobj?.is_registered ? 'Registered' : 'Not yet registered' }}</h6>
+             </div>
+             <div class="detail-item">
+                 <h6 class="detail-heading">Live status</h6>
+                 <h6 class="detail-content">{{detailedobj?.is_live ? 'Yes' : 'No'}}</h6>
+             </div>
+         </div>
+    </div>
+    <div class="detail-right">  
+        <div class="form-group">
+         <h3 class="form-heading"> Edit Warehouse </h3>
+            <form [formGroup]="warehouseForm" (ngSubmit)="onSave()">
+                    <label for="name" class="label-heading">Warehouse name</label>
+                    <input type="text"  id="name" class="form-control" formControlName="name"/>
+                    <label for="imagePath" class="label-heading">Warehouse code</label>
+                    <input type="text" id="imagePath" class="form-control" formControlName="code"/>
+                    <label for="imagePath" class="label-heading">city</label>
+                    <input type="text" id="imagePath" class="form-control" formControlName="city"/>
+                    <label for="imagePath" class="label-heading">space availability</label>
+                    <input type="text" id="imagePath" class="form-control" formControlName="space_available"/>
+                    <label for="imagePath" class="label-heading">type</label>
+                    <input type="text" id="imagePath" class="form-control" formControlName="type"/>
+                    <label for="imagePath" class="label-heading">cluster</label>
+                    <input type="text" id="imagePath" class="form-control" formControlName="cluster"/>
+                    <label for="imagePath" class="label-heading">Is registered</label>
+                    <input type="text" id="imagePath" class="form-control" formControlName="is_registered"/>
+                    <label for="imagePath" class="label-heading">live status</label>
+                    <input type="text" id="imagePath" class="form-control" formControlName="is_live"/>   
+                    <button class="btnclass" 
+                    type="submit"
+                    [disabled]="!warehouseForm.valid" >
+                    Save
+                  </button>
+                </form>
+          </div>
+        </div>
+    </div>

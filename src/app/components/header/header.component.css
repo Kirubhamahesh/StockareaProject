@@ -1,0 +1,43 @@
+.page-header {
+    background-color: #011B42;
+    margin: 0px;
+    padding: 0px;
+      
+}
+.add-btn {
+    background-color: #0072CF;
+    border-radius: 2px;
+    padding: 8px 16px;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 24px;
+    text-align: center;
+    color: #FFFFFF;
+}
+.nav-group {
+    white-space: nowrap;
+    padding: 0 10px; 
+}
+.nav-items {
+    display: inline-block;
+    text-decoration: none;
+    padding: 15px 20px;
+    vertical-align: middle;
+    color: white;
+    cursor: pointer;
+}
+.nav-right-group {
+    float: right;
+}
+.menu {
+    display: none;
+    padding: 10px 20px;
+    color: white;
+}
+.menu-icon {
+    outline: none;
+}
+.close-icon {
+outline: none;
+}
+
